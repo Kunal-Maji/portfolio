@@ -1,6 +1,9 @@
-<nav>
+<div class="header">
+  <nav>
     <div class="navbar">
-      <div class="logo"><a href="#">Krypton</a></div>
+      <div class="logo"><!-- <a href="#">Krypton</a> -->
+        <a href="#" style="background: linear-gradient(to right, #cfcccc, #d76c1e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Krypton</a>
+      </div>
       <ul class="menu">
         <li><a href="#Home">Home</a></li>
         <li><a href="#About">About</a></li>
@@ -10,11 +13,20 @@
       </ul>
     </div>
   </nav>
-  <section id="Home">Home Section</section>
+  <div class="image-background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    <img src="../../assets/bg1.jpg" style="width: 100%; height: 100%;" />
+  </div>
+  <section id="Home">
+    <div style="font-family: 'Unique Font', sans-serif; font-size: 36px; color: #a2a2a2;margin-bottom: 20px;">Hey All &nbsp;</div>
+    <div style="font-family: 'Bold Aesthetic Font', sans-serif; font-size: 48px; font-weight: bold; color: #e0e0e0;margin-bottom: 20px;">I am Kunal Maji</div>
+    <p style="font-size: 30px; color: #9d9d9d; margin-bottom: 20px;">"To Build your Imagination Real."</p>
+    <p style="font-size: 22px; color: #bcbcbc;padding-right: 20%;">I'm a full-stack developer with expertise in both front-end and back-end development, experienced in developing and deploying web applications from scratch to production. Proficient in various technologies and able to build dynamic and scalable systems.</p>
+  </section>
   <section id="About">About Section</section>
   <section id="Category">Category Section</section>
   <section id="Contact">Contact Section</section>
   <section id="Feedback">Feedback Section</section>
-  <div class="button" style="color: brown;">
+  <div class="button" style="color: brown">
     <a href="#Home"><i class="fas fa-arrow-up"></i></a>
   </div>
+</div>

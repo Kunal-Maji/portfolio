@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.header{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 nav {
   position: fixed;
   left: 0;
@@ -13,7 +16,9 @@ nav {
   height: 75px;
   background: #2980b9;
   background-color: #2B2B2B;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #180531, #0e215a, #4169E1);
+  background: linear-gradient(to right, #07040c, #120e06, #2B2B2B);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 nav .navbar {
   display: flex;
@@ -23,6 +28,7 @@ nav .navbar {
   max-width: 90%;
   background: #2980b9;
   background-color: #2B2B2B;
+  background-color: transparent;
   margin: auto;
 }
 nav .navbar .logo a {
@@ -45,31 +51,41 @@ nav .navbar .menu {
   text-decoration: none;
 }
 section {
-  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
   height: 100vh;
   width: 100%;
-  align-items: center;
-  justify-content: center;
   color: #96c7e8;
   font-size: 70px;
+ /*  background-image: url('../../assets/19187761.jpg') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+  z-index: 1;
 }
 #Home {
-  background: #423F3E;
+  /* background: #1c1b1b; */
+  padding-top: 15%;
 }
 #About {
-  background: #444444;
+  padding-top: 15%;
+  background: #4444443d;
 }
 #Category {
-  background: #423F3E;
+  padding-top: 15%;
+  background: #423f3e3f;
 }
 #Latest {
-  background: #444444;
+  padding-top: 15%;
+  background: #4444443f;
 }
 #Contact {
-  background: #444444;
+  padding-top: 15%;
+  background: #4444442f;
 }
 #Feedback {
-  background: #423F3E;
+  padding-top: 15%;
+  background: #423f3e40;
 }
 .button a {
   position: fixed;
