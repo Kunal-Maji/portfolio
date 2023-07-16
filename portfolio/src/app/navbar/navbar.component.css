@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 .header{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -121,6 +121,7 @@ section {
 #About {
   padding-top: 10%;
   background: #4444443d;
+  color:#f5d7db
 }
 #About .section-heading {
   text-align: left;
@@ -129,7 +130,7 @@ section {
 }
 
 #About .about-content {
-  padding-top: 4%;
+  padding-top: 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -206,19 +207,71 @@ section {
 #Works {
   padding-top: 10%;
   background: #4444443d;
+  color:#ffffff
 }
-#Works .mat-tab-group{
+.section-heading {
   font-family: 'Bold Aesthetic Font', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #f5d7db;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  padding-bottom: 5%;
 }
-#Works .mat-tab-label{
-  width: 100px;
-  height: 80px;
-  font-size: 20px;
-  background-color: #000000;
+
+.section-link {
+  background: linear-gradient(to right, #bd83b8, #f1916d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
-#works .mat-list{
-  font-size: medium;
+
+.tab-label {
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 8%;
+  color: #f5d7db;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.list-item {
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  color: #9d9d9d;
+}
+
+.list-item-title {
+  font-size: 22px;
+  padding-bottom: 3%;
+  color: #f1916d !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3%;
+  font-weight: bold;
+}
+
+.list-item-text {
+  color: #adadad;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 5%;
+  padding-top: 2%;
+  font-style: italic;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.Tech-Used {
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.project-links {
+  padding-left: 5%;
+
+}
+
 
 #Latest {
   padding-top: 10%;
@@ -227,11 +280,58 @@ section {
 #Out-of-class {
   padding-top: 10%;
   background: #4444443d;
+  padding-bottom: 5%;
 }
+.container {
+  padding: 0 0%;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 30%; /* Adjust the width as per your preference */
+  background-color: rgba(255, 255, 255, 0.074); /* Adjust the alpha value (0.3) to control the transparency */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card mat-card{
+  font-size: medium;
+}
+
+.visit-website-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #d76c1e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .card-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
 #Feedback {
   padding-top: 10%;
   background: #4444443d;
-
+  font-family: 'Material Icons' !important;
 }
 
 /* Form container */

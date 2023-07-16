@@ -8,11 +8,12 @@ import {
 } from '@angular/animations';
 import * as AOS from 'aos';
 // import '../../../node_modules/aos/dist/aos.css';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  animations: [
+  /* animations: [
     trigger('changeDivSize', [
       state(
         'initial',
@@ -34,7 +35,7 @@ import * as AOS from 'aos';
       transition('initial=>final', animate('1500ms')),
       transition('final=>initial', animate('1000ms')),
     ]),
-  ],
+  ], */
 })
 export class NavbarComponent implements OnInit {
   currentState = 'initial';
@@ -74,4 +75,11 @@ export class NavbarComponent implements OnInit {
       message: ''
     };
   }
+
+  getRandomColor(): string {
+    const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF', '#C0C0C0', '#808080', '#800000', '#008080'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+}
+
 }
