@@ -80,6 +80,10 @@ nav .navbar .menu {
   background-color: #ffdb58; /* Mustard color */
   border-radius: 2px;
 }
+#playPauseButton{
+  background-color: transparent;
+  width:20px;
+}
 
 /* backgroud effect*/
 svg {

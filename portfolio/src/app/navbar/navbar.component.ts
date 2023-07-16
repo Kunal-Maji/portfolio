@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef ,ViewChild  } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -41,10 +41,12 @@ export class NavbarComponent implements OnInit {
   currentState = 'initial';
   @ViewChild('stackList')
   stackListRef!: ElementRef;
+  @ViewChild('myAudio') audioRef!: ElementRef;
 
-  ngOnInit():void {
+  ngOnInit(): void {
     AOS.init();
-    const listItems = this.stackListRef.nativeElement.querySelectorAll('.stack-list li');
+    const listItems =
+      this.stackListRef.nativeElement.querySelectorAll('.stack-list li');
     const delay = 100;
 
     for (let i = 0; i < listItems.length; i++) {
@@ -61,7 +63,7 @@ export class NavbarComponent implements OnInit {
   formData = {
     name: '',
     email: '',
-    message: ''
+    message: '',
   };
 
   submitForm() {
@@ -72,14 +74,31 @@ export class NavbarComponent implements OnInit {
     this.formData = {
       name: '',
       email: '',
-      message: ''
+      message: '',
     };
   }
 
   getRandomColor(): string {
-    const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF', '#C0C0C0', '#808080', '#800000', '#008080'];
+    const colors = [
+      '#FF0000',
+      '#00FF00',
+      '#0000FF',
+      '#FFFF00',
+      '#00FFFF',
+      '#FF00FF',
+      '#C0C0C0',
+      '#808080',
+      '#800000',
+      '#008080',
+    ];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
-}
+  }
+
+  playPauseIcon: boolean = true;
+  playPause(){
+    this.playPauseIcon = !this.playPauseIcon;
+    
+  }
 
 }

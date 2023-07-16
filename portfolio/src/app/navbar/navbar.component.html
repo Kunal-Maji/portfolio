@@ -10,6 +10,12 @@
             font-weight: bold;
           ">Krypton</a>
       </div>
+
+      <audio id="myAudio" controls style="display: none;">
+        <source src="../../assets/Audio/audio.mp3" type="audio/mpeg"> type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
       <ul class="menu">
         <li data-aos="fade-right" data-aos-duration="2000"><a href="#Home" (click)="changeState()">Home</a></li>
         <li data-aos="fade-right" data-aos-duration="2000"><a href="#About" (click)="changeState()">About</a></li>
@@ -17,7 +23,15 @@
         <li data-aos="fade-right" data-aos-duration="2000"><a href="#Out-of-class"
             (click)="changeState()">Out-of-class</a></li>
         <li data-aos="fade-right" data-aos-duration="2000"><a href="#Feedback" (click)="changeState()">Feedback</a></li>
+
+        <button id="playPauseButton" data-aos="fade-right" data-aos-duration="2000" (click)="playPause()" type="button">
+          <span [ngStyle]="{ display: !playPauseIcon ? 'none' : 'inline' }" onclick="document.getElementById('myAudio').play()" style="margin-right: 10px; cursor: pointer;"><i id="playPauseIcon" style="color:white" [class]="playPauseIcon ? 'fas fa-play' : 'fas fa-pause'"></i></span>
+<span [ngStyle]="{ display: !playPauseIcon ? 'inline' : 'none' }" onclick="document.getElementById('myAudio').pause()" style="cursor: pointer;"><i id="playPauseIcon" style="color:white" [class]="playPauseIcon ? 'fas fa-play' : 'fas fa-pause'"></i></span>
+
+        </button>
+
       </ul>
+
     </div>
   </nav>
   <div class="image-background" style="
@@ -81,7 +95,7 @@
     <div data-aos="fade-up" data-aos-duration="3000">
       <div
         style="font-family: 'Unique Font', sans-serif;font-size: 36px;color: #a2a2a2;margin-bottom: 20px;font-family: Arial, sans-serif;">
-        Hey All &nbsp;<i class="fa fa-check"></i>
+        Hey All
       </div>
       <div data-aos="fade-in" data-aos-duration="6000"
         style="font-family: 'Bold Aesthetic Font', sans-serif;font-size: 48px;font-weight: bold;color: #e0e0e0;margin-bottom: 20px;font-family: Arial, sans-serif;">
