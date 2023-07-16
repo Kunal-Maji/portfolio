@@ -1,0 +1,450 @@
+<div class="header">
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <!-- <a href="#">Krypton</a> -->
+        <a href="#" style="
+            background: linear-gradient(to right, #cfcccc, #d76c1e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          ">Krypton</a>
+      </div>
+
+      <audio id="myAudio" controls style="display: none;">
+        <source src="../../assets/Audio/audio.mp3" type="audio/mpeg"> type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <ul class="menu">
+        <li data-aos="fade-right" data-aos-duration="2000"><a href="#Home" (click)="changeState()">Home</a></li>
+        <li data-aos="fade-right" data-aos-duration="2000"><a href="#About" (click)="changeState()">About</a></li>
+        <li data-aos="fade-right" data-aos-duration="2000"><a href="#Works" (click)="changeState()">Works</a></li>
+        <li data-aos="fade-right" data-aos-duration="2000"><a href="#Out-of-class"
+            (click)="changeState()">Out-of-class</a></li>
+        <li data-aos="fade-right" data-aos-duration="2000"><a href="#Feedback" (click)="changeState()">Feedback</a></li>
+
+        <button id="playPauseButton" data-aos="fade-right" data-aos-duration="2000" (click)="playPause()" type="button">
+          <span [ngStyle]="{ display: !playPauseIcon ? 'none' : 'inline' }" onclick="document.getElementById('myAudio').play()" style="margin-right: 10px; cursor: pointer;"><i id="playPauseIcon" style="color:white" [class]="playPauseIcon ? 'fas fa-play' : 'fas fa-pause'"></i></span>
+<span [ngStyle]="{ display: !playPauseIcon ? 'inline' : 'none' }" onclick="document.getElementById('myAudio').pause()" style="cursor: pointer;"><i id="playPauseIcon" style="color:white" [class]="playPauseIcon ? 'fas fa-play' : 'fas fa-pause'"></i></span>
+
+        </button>
+
+      </ul>
+
+    </div>
+  </nav>
+  <div class="image-background" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #1b1a1a;
+    ">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
+      <defs>
+        <style>
+          @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          .out-top {
+            animation: rotate 20s linear infinite;
+            transform-origin: 13px 25px;
+          }
+
+          .in-top {
+            animation: rotate 10s linear infinite;
+            transform-origin: 13px 25px;
+          }
+
+          .out-bottom {
+            animation: rotate 25s linear infinite;
+            transform-origin: 84px 93px;
+          }
+
+          .in-bottom {
+            animation: rotate 15s linear infinite;
+            transform-origin: 84px 93px;
+          }
+        </style>
+      </defs>
+      <path fill="#473e66" class="out-top"
+        d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z" />
+      <path fill="#1b3358" class="in-top"
+        d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z" />
+      <path fill="#06142e" class="out-bottom"
+        d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" />
+      <path fill="#bd83b8" class="in-bottom"
+        d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" />
+    </svg>
+
+
+    <!-- <img src="../../assets/bg1.jpg" style="width: 100%; height: 100%" /> -->
+  </div>
+
+  <section id="Home" [@changeDivSize]="currentState">
+    <div data-aos="fade-up" data-aos-duration="3000">
+      <div
+        style="font-family: 'Unique Font', sans-serif;font-size: 36px;color: #a2a2a2;margin-bottom: 20px;font-family: Arial, sans-serif;">
+        Hey All
+      </div>
+      <div data-aos="fade-in" data-aos-duration="6000"
+        style="font-family: 'Bold Aesthetic Font', sans-serif;font-size: 48px;font-weight: bold;color: #e0e0e0;margin-bottom: 20px;font-family: Arial, sans-serif;">
+        I am Kunal Maji
+      </div>
+      <p data-aos="zoom-in" data-aos-duration="6000"
+        style="font-size: 46px;color: #9d9d9d;margin-bottom: 20px;font-family: 'Brush Script MT', cursive;background: linear-gradient(to right, #bd83b8, #f1916d);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;">
+        "To Build your Imagination Real."
+      </p>
+      <p style="font-size: 22px;color: #bcbcbc;padding-right: 20%;font-family: Arial, sans-serif;">
+        I'm a full-stack developer with expertise in both front-end and back-end
+        development, experienced in developing and deploying web applications from
+        scratch to production. Proficient in various technologies and able to
+        build dynamic and scalable systems.
+      </p>
+    </div>
+  </section>
+
+  <section id="About">
+    <div class="section-heading"
+      style="font-family: 'Bold Aesthetic Font', sans-serif;font-size: 36px;font-weight: bold;color: #e0e0e0;margin-bottom: 5px;font-family: Arial, sans-serif;">
+      <a href="#"
+        style="background: linear-gradient(to right, #bd83b8, #f1916d);-webkit-background-clip: text;-webkit-text-fill-color: transparent;  font-weight: bold;">ABOUT</a>
+    </div>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+        <p style=" font-size: 18px;color: #9d9d9d;margin-bottom: 22px;font-family: Arial, sans-serif;">
+          Hello! I am a full-stack developer with 1 year of experience in the
+          field. My passion lies in crafting visually appealing, highly
+          functional, and user-friendly websites and mobile applications.
+        </p><br>
+        <p style="font-size: 18px;color: #9d9d9d;margin-bottom: 22px;font-family: Arial, sans-serif;">
+          Over time, I have had the opportunity to work in both startup and
+          corporate environments, gaining valuable experience. Currently, I am
+          dedicated to creating accessible and inclusive products and digital
+          experiences at Infosys, where I work with a diverse range of clients.
+        </p>
+      </div>
+      <div class="profile-picture" data-aos="fade-left" data-aos-duration="3000">
+        <img src="../../assets/IMG_20230520_053632.jpg" alt="Profile Picture" />
+      </div>
+    </div>
+    <div class="tech-stack">
+      <h3 class="stack-heading" style="
+      font-family: 'Bold Aesthetic Font', sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    ">Tech Stack</h3>
+      <ul class="stack-list" data-aos="zoom-in" data-aos-duration="3000">
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/angular.png" alt="Angular" />
+          <span>Angular</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/angularMaterial.png" alt="Angular Material" />
+          <span>Angular Material</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/nodejs.png" alt="Node.js" />
+          <span>Node.js</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/mongodb.png" alt="MongoDB" />
+          <span>MongoDB</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/js.png" alt="JavaScript" />
+          <span>JavaScript</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/ts.png" alt="TypeScript" />
+          <span>TypeScript</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/mysql.png" alt="SQL" />
+          <span>SQL</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/fewd-ux.png" alt="Front-End Development" />
+          <span>Front-End Development</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/express.png" alt="Express.js" />
+          <span>Express.js</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/loopback.png" alt="LoopBack" />
+          <span>LoopBack</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/c.png" alt="C" />
+          <span>C</span>
+        </li>
+        <li>
+          <img class="tech-icon" src="../../assets/LOGOS/c++.png" alt="C++" />
+          <span>C++</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="Works">
+    <div class="section-heading">
+      <a href="#" class="section-link">What I've Worked</a>
+    </div>
+    <mat-tab-group data-aos="fade-up" data-aos-duration="3000" animationDuration="2000ms">
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab-label">Self-Content</span>
+        </ng-template>
+        <mat-list>
+          <mat-list-item lines="3" class="list-item">
+            <span class="list-item-title" style="color: #d76c1e;">Youtube AdView Prediction</span>
+            <div class="list-item-text" >Secondary line that will wrap because the list lines is explicitly set to 3 lines. Text inside of a `matListItemTitle` or `matListItemLine` will never wrap.</div>
+            <div class="Tech-Used">hi</div>
+            <div class="project-links">hi</div>
+          </mat-list-item>
+          <mat-list-item lines="3" class="list-item">
+            <span class="list-item-title" style="color: #d76c1e;">Music-WebApp</span>
+            <div class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+            <div class="Tech-Used">hi</div>
+            <div class="project-links">hi</div>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab-label">Infosys</span>
+        </ng-template>
+        <mat-list>
+          <mat-list-item lines="3" class="list-item">
+            <span class="list-item-title" style="color: #d76c1e;">Flight Booking</span>
+            <div class="list-item-text">Secondary line that will wrap because the list lines is explicitly set to 3 lines. Text inside of a `matListItemTitle` or `matListItemLine` will never wrap.</div>
+            <div class="Tech-Used">hi</div>
+            <div class="project-links">hi</div>
+          </mat-list-item>
+          <mat-list-item lines="3" class="list-item">
+            <span class="list-item-title" style="color: #d76c1e;">Vehicle Management Portal</span>
+            <div class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+            <div class="Tech-Used">hi</div>
+            <div class="project-links">hi</div>
+          </mat-list-item>
+          <mat-list-item lines="3" class="list-item">
+            <span class="list-item-title"style="color: #d76c1e;">Scaffolding App for Bank</span>
+            <div class="list-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</div>
+            <div class="Tech-Used">hi</div>
+            <div class="project-links">hi</div>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+
+    </mat-tab-group>
+  </section>
+
+  <section id="Out-of-class">
+    <div class="section-heading" style="
+    font-family: 'Bold Aesthetic Font', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  "><a href="#" style="
+            background: linear-gradient(to right, #cfcccc, #d76c1e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          ">Extra-Curricular</a></div>
+
+<div class="container">
+  <div class="card-row">
+    <div class="card" data-aos="fade-right" data-aos-duration="1000">
+      <!-- Card content goes here -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="card" data-aos="fade-right" data-aos-duration="2000">
+      <!-- Card content goes here -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="card" data-aos="fade-right" data-aos-duration="3000">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="card-row">
+    <div class="card" data-aos="fade-right" data-aos-duration="1000">
+      <!-- Card content goes here -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="card" data-aos="fade-right" data-aos-duration="2000">
+      <!-- Card content goes here -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="card" data-aos="fade-right" data-aos-duration="3000">
+      <!-- Card content goes here -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <!-- Add more card rows if needed -->
+</div>
+
+<button class="visit-website-button">Visit Website</button>
+
+  </section>
+
+  <section id="Feedback">
+    <div class="section-heading" style="
+    font-family: 'Bold Aesthetic Font', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  "><a href="#" style="
+            background: linear-gradient(to right, #cfcccc, #d76c1e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          ">Feedback</a></div>
+    <div class="container-form">
+      <form (ngSubmit)="submitForm()" #contactForm="ngForm" style="width:100%">
+        <div data-aos="fade-in" data-aos-duration="3000">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Enter Your Name">
+        </div>
+        <div data-aos="fade-in" data-aos-duration="3000">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="formData.email" required placeholder="yourname@email.com">
+        </div>
+        <div data-aos="fade-in" data-aos-duration="3000">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" [(ngModel)]="formData.message" required placeholder="Give Feedback Here ..."></textarea>
+        </div>
+        <button data-aos="fade-in" data-aos-duration="3000" type="submit" [disabled]="!contactForm.form.valid">Submit</button>
+      </form>
+    </div>
+
+  </section>
+
+  <div class="social-icons">
+    <div data-aos="fade-up" data-aos-duration="3000"><a href="#" class="social-icon"><i
+          class="fab fa-facebook-f"></i></a></div>
+    <div data-aos="fade-up" data-aos-duration="3000"><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div data-aos="z" data-aos-duration="1000"><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="button" style="color: brown;">
+    <a href="#Home" style="background-color: #1b1a1a;"><!-- <i class="fas fa-arrow-up"></i> -->
+      <img src="../../assets/LOGOS/up arrow.png" alt="C++" style="height:24px;width:auto;" /></a>
+  </div>
+</div>
