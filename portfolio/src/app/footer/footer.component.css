@@ -109,6 +109,9 @@ footer a{
 footer a:hover{
   color: #eb2f06;
 }
+.curved-div svg {
+  display: block;
+}
 @media (max-width:1100px) {
   footer .content .middle{
     padding-left: 50px;

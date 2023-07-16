@@ -18,7 +18,9 @@ nav {
   background-color: #2B2B2B;
   background: linear-gradient(to right, #180531, #0e215a, #4169E1);
   background: linear-gradient(to right, #07040c, #120e06, #2B2B2B);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: transparent;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); */ /* for bg transparent purpose*/
+  z-index: 100;
 }
 nav .navbar {
   display: flex;
@@ -49,47 +51,301 @@ nav .navbar .menu {
   font-size: 17px;
   font-weight: 500;
   text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
+
+.navbar .menu li a:hover {
+  background-color: #515151;
+  border-radius: 8px;
+  color: #ffdb58;
+  border-color: #000;
+}
+
+.navbar .menu li a:active {
+  position: relative;
+}
+
+.navbar .menu li a:active::placeholder {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  color: #ffdb58 ;
+  background-color: #ffdb58; /* Mustard color */
+  border-radius: 2px;
+}
+
+/* backgroud effect*/
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+/* backgroud effect*/
+
 section {
   padding-left: 20%;
   padding-right: 20%;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: #96c7e8;
   font-size: 70px;
- /*  background-image: url('../../assets/19187761.jpg') !important;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; */
   z-index: 1;
+  opacity: 1; /* Initially hide the sections */
+
+}
+.section:active {
+  transition: opacity 1.5s ease-in-out;
+  opacity: 1;
 }
 #Home {
   /* background: #1c1b1b; */
   padding-top: 15%;
 }
+/* #Home [data-aos] {
+  opacity: 0;
+  transition-duration: 800ms;
+}
+
+#Home [data-aos].aos-animate {
+  opacity: 1;
+} */
 #About {
-  padding-top: 15%;
+  padding-top: 10%;
   background: #4444443d;
 }
-#Category {
-  padding-top: 15%;
-  background: #423f3e3f;
+#About .section-heading {
+  text-align: left;
+  /* text-decoration: underline; */
+  font-size: 48px;
 }
+
+#About .about-content {
+  padding-top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#About .about-text {
+  width: 70%;
+}
+
+#About .profile-picture img {
+  width: 250px;
+  max-width: 100%;
+  height: 50%;
+  display: block;
+  border: #000;
+  border-radius: 50%;
+  transition: width 2s, height 4s;
+}
+#About .profile-picture img:hover {
+  width:300px;
+  height: 300px;
+  /* display: block;
+  border: #000;
+  border-radius: 50%; */
+}
+
+#About .tech-stack {
+  margin-top: 4%;
+}
+
+#About .stack-heading {
+  font-size: 36px !important;
+}
+
+#About .stack-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#About .stack-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+}
+
+#About .stack-list li img {
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: width 0.8s, height 0.8s;
+}
+
+#About .stack-list li span {
+  font-size: 14px;
+  text-align: center;
+}
+#About .tech-icon{
+  height:20px;
+  width:auto;
+
+}
+#About .stack-list li img:hover{
+  height:50px;
+  width:100px;
+}
+
+#Works {
+  padding-top: 10%;
+  background: #4444443d;
+}
+#Works .mat-tab-group{
+  font-family: 'Bold Aesthetic Font', sans-serif;
+}
+#Works .mat-tab-label{
+  width: 100px;
+  height: 80px;
+  font-size: 20px;
+  background-color: #000000;
+}
+#works .mat-list{
+  font-size: medium;
+}
+
 #Latest {
-  padding-top: 15%;
-  background: #4444443f;
+  padding-top: 10%;
+  background: #4444443d;
 }
-#Contact {
-  padding-top: 15%;
-  background: #4444442f;
+#Out-of-class {
+  padding-top: 10%;
+  background: #4444443d;
 }
 #Feedback {
-  padding-top: 15%;
-  background: #423f3e40;
+  padding-top: 10%;
+  background: #4444443d;
+
 }
+
+/* Form container */
+.container-form{
+  /* width:600px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  /* max-width: 400px; */
+  /* width: 50%; */
+  height: 200px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+form{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+label {
+  display: none;
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: large;
+  padding-top: 5%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #c6c6c6c1;
+  border: 1px solid #2c2c2c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+input::placeholder {
+  font-family: 'Bold Aesthetic Font', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+textarea::placeholder {
+  font-family: 'Bold Aesthetic Font', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+#message {
+  width: 100%;
+  padding: 45px;
+  border-radius: 5px;
+  background-color: #c6c6c6c1;
+  border: 1px solid #2c2c2c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  outline: none;
+  margin-top: 5%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:disabled {
+  background-color: #ccc;
+  color:#2B2B2B;
+  cursor: not-allowed;
+}
+
+
+.social-icons {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background-color: #666;
+}
+
 .button a {
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
   color: #fff;
   background: #2980b9;
