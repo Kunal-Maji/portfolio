@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild , AfterViewInit, OnDestroy, Renderer2 } from '@angular/core';
 import {
   trigger,
   state,
@@ -7,8 +7,9 @@ import {
   transition,
 } from '@angular/animations';
 import * as AOS from 'aos';
-// import '../../../node_modules/aos/dist/aos.css';
-
+//import '../../../node_modules/aos/dist/aos.css';
+import 'slick-carousel';
+import { interval, Subscription } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -42,6 +43,21 @@ export class NavbarComponent implements OnInit {
   @ViewChild('stackList')
   stackListRef!: ElementRef;
   @ViewChild('myAudio') audioRef!: ElementRef;
+   // carousel
+  // @ViewChild('carousel') carouselRef!: ElementRef<HTMLDivElement>;
+
+  // private currentImageIndex: number = 0;
+  // private intervalSubscription: Subscription;
+
+  // constructor(private renderer: Renderer2) {
+  //   this.intervalSubscription = new Subscription();
+  // }
+ // carousel
+ images = [
+  {path: '../../assets/Wallpaper/c-img (1).jpg'},
+  {path: '../../assets/Wallpaper/c-img (2).jpg'},
+  {path: '../../assets/Wallpaper/c-img (3).jpg'},
+];
 
   ngOnInit(): void {
     AOS.init();
@@ -54,7 +70,34 @@ export class NavbarComponent implements OnInit {
       listItems[i].setAttribute('data-aos-delay', (i * delay).toString());
       listItems[i].setAttribute('data-aos-duration', '2000');
     }
+    // this.startCarousel(); // carousel
   }
+ // carousel
+  // ngOnDestroy() {
+  //   this.stopCarousel();
+  // }
+
+  // private startCarousel() {
+  //   const carouselImages = this.carouselRef.nativeElement.querySelectorAll('.carousel-image');
+  //   this.renderer.addClass(carouselImages[this.currentImageIndex], 'active');
+
+  //   // Change image every 5 seconds (adjust the time as desired)
+  //   this.intervalSubscription = interval(5000).subscribe(() => {
+  //     this.showNextImage(carouselImages);
+  //   });
+  // }
+
+  // private stopCarousel() {
+  //   this.intervalSubscription.unsubscribe();
+  // }
+
+  // private showNextImage(carouselImages: NodeListOf<Element>) {
+  //   this.renderer.removeClass(carouselImages[this.currentImageIndex], 'active');
+  //   this.currentImageIndex = (this.currentImageIndex + 1) % carouselImages.length;
+  //   this.renderer.addClass(carouselImages[this.currentImageIndex], 'active');
+  // }
+ // carousel
+
 
   changeState() {
     this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
@@ -98,7 +141,7 @@ export class NavbarComponent implements OnInit {
   playPauseIcon: boolean = true;
   playPause(){
     this.playPauseIcon = !this.playPauseIcon;
-    
+
   }
 
 }

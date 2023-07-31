@@ -16,6 +16,8 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref" : "/",
+            "deployUrl": "/",
             "polyfills": [
               "zone.js"
             ],
@@ -61,6 +63,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "v2": {
+              "servePath": "/v2"
+            },
             "production": {
               "browserTarget": "portfolio:build:production"
             },

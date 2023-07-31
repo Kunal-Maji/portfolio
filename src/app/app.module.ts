@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +14,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import * as AOS from 'aos';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +35,11 @@ import {MatIconModule} from '@angular/material/icon'
     FormsModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    IvyCarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }
